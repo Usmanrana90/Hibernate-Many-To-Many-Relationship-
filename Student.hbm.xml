@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+		<hibernate-mapping>
+		<class name="cloudxweb.Student" table="student">
+		<id name="sid" column="SID" length="20"/>
+		<property name="sname" column="SNAME" length="20"/>
+		<property name="saddr" column="SADDR" length="20"/>
+		 
+		 <set name="courses" table="student_course" cascade="all">
+		 <key column="SID"/>
+		 <many-to-many column="CID" class="cloudxweb.Course"/>
+		 </set>
+		
+		</class>
+		</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cloudxweb.Course" table="course">
+	<id name="cid" column="CID" length="30"/>
+	<property name="cname" column="CNAME" length="20"/>
+	<property name="ccost" column="CCOST" length="20"/>
+
+	
+	</class>
+
+	</hibernate-mapping>
